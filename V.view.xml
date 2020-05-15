@@ -1,0 +1,198 @@
+<mvc:View
+	controllerName="sap.m.sample.SplitApp.C"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	<SplitApp
+		id="SplitAppDemo"
+		initialDetail="detail"
+		initialMaster="master"
+		orientationChange=".onOrientationChange">
+		<detailPages>
+			<Page
+				id="detail1"
+				title="Характеристики"
+				backgroundDesign= "Solid"
+				class="sapUiStdPage">
+                 <Label text=" Процессор: i3-6006U 4Gb "/>
+                 <Label text="Память: SSD 256Gb  "/>
+                 <Label text=" Видеокарта: Intel HD Graphics 520  "/>
+                 <Label text=" Экран: 15,6 "/>
+                <Label text=" Стоимость: 32 200 р "/>
+			</Page>
+          
+            
+            
+			<Page
+				id="detail2"
+				title="Характеристики"
+				class="sapUiStdPage"
+				backgroundDesign= "Solid">
+                 <Label text=" Процессор: i7-9750H 24GB "/>
+                 <Label text="Память:  SSD 1T"/>
+                 <Label text=" Видеокарта: nV RTX2080 8Gb  "/>
+                 <Label text=" Экран: 15,6 "/>
+                <Label text=" Стоимость: 210200 р  "/>
+			</Page>
+        
+			<Page
+				id="detail3"
+				title="Характеристики"
+				backgroundDesign= "Solid"
+				class="sapUiStdPage">
+                 <Label text=" Процессор:  i7-8750H 16Gb "/>
+                 <Label text="Память:   SSD 1Tb"/>
+                 <Label text=" Видеокарта: nV RTX2070  8Gb "/>
+                 <Label text=" Экран: 15,6"/>
+                <Label text=" Стоимость: 173 800 р "/>
+			</Page>
+          
+            <Page
+				id="detail4"
+				title="Характеристики"
+				backgroundDesign= "Solid"
+				class="sapUiStdPage">
+                 <Label text=" Процессор:  i5-8300H 8Gb "/>
+                 <Label text="Память:   1Tb + SSD 128Gb"/>
+                 <Label text=" Видеокарта:   nV RTX2060 6Gb "/>
+                 <Label text=" Экран: 15,6"/>
+                <Label text=" Стоимость: 	101 000  р "/>
+			</Page>
+                        <Page
+				id="detail5"
+				title="Характеристики"
+				backgroundDesign= "Solid"
+				class="sapUiStdPage">
+                 <Label text=" Процессор:  i5-10210U 8Gb "/>
+                 <Label text="Память:   1Tb + SSD 256Gb"/>
+                 <Label text=" Видеокарта:  AMD Radeon RX 640 2Gb "/>
+                 <Label text=" Экран: 14"/>
+                <Label text=" Стоимость: 87900 р "/>
+			</Page>
+            
+            <Page
+				id="detail6"
+				title="Характеристики"
+				backgroundDesign= "Solid"
+				class="sapUiStdPage">
+                 <Label text=" Процессор:  i7-8750H 16Gb "/>
+                 <Label text="Память:   SSD 1Tb"/>
+                 <Label text=" Видеокарта: nV RTX2070  8Gb "/>
+                 <Label text=" Экран: 15,6"/>
+                <Label text=" Стоимость: 173 800 р "/>
+			</Page>
+                        <Page
+				id="detail7"
+				title="Характеристики"
+				backgroundDesign= "Solid"
+				class="sapUiStdPage">
+                 <Label text=" Процессор:  i3-1000NG4 8Gb "/>
+                 <Label text="Память:  SSD 256Gb"/>
+                 <Label text=" Видеокарта:  Iris Plus Graphics 13,3  "/>
+                 <Label text=" Экран: 13,3"/>
+                <Label text=" Стоимость: 99000 р "/>
+			</Page>
+              
+                        <Page
+				id="detail8"
+				title="Характеристики"
+				backgroundDesign= "Solid"
+				class="sapUiStdPage">
+                 <Label text=" Процессор:   i9-9880H  16Gb "/>
+                 <Label text="Память:   SSD 1Tb"/>
+                 <Label text=" Видеокарта: AMD Radeon Pro 5500M 4Gb "/>
+                 <Label text=" Экран: 16"/>
+                <Label text=" Стоимость: 230900 р "/>
+			</Page>
+        
+                        <Page
+				id="detail9"
+				title="Характеристики"
+				backgroundDesign= "Solid"
+				class="sapUiStdPage">
+                 <Label text=" Процессор:    i5-8279U 8Gb "/>
+                 <Label text="Память:     SSD 256Gb"/>
+                 <Label text=" Видеокарта:  Iris Plus Graphics 655  "/>
+                 <Label text=" Экран: 13,3 "/>
+                <Label text=" Стоимость: 145 900 р "/>
+			</Page>
+        
+		</detailPages>
+        
+        
+        
+		<masterPages>
+			<Page
+				id="master"
+				title="Фирма ноутбуков"
+				backgroundDesign= "List"
+				icon="sap-icon://action"
+				class="sapUiStdPage">
+				<List>
+					<StandardListItem title="Asus" type="Navigation" press=".onPressGoToMaster" />
+                    <StandardListItem title="Lenovo" type="Navigation" press=".onPressGoToMaste1r1"/>
+                    <StandardListItem title="Apple" type="Navigation" press=".onPressGoToMaste1r2"/>
+				</List>
+			</Page>
+            
+            
+			<Page
+				id="Asus"
+				title="Asus"
+				backgroundDesign= "List"
+				icon="sap-icon://action"
+				class="sapUiStdPage"
+				showNavButton="true"
+				navButtonPress=".onPressMasterBack">
+				<List itemPress=".onListItemPress">
+					<items>
+						<StandardListItem title="Asus VivoBook 15 X540UA-DM597T" type="Active" custom:to="detail1" />
+						<StandardListItem title="ASUS Zephyrus S GX531GXR" type="Active" custom:to="detail2" />
+						<StandardListItem title="ASUS GL504GW" type="Active" custom:to="detail3" />
+					</items>
+				</List>
+			</Page>
+            
+            
+            <Page
+				id="Lenovo"
+				title="Lenovo"
+				backgroundDesign= "List"
+				icon="sap-icon://action"
+				class="sapUiStdPage"
+				showNavButton="true"
+				navButtonPress=".onPressMasterBack">
+				<List itemPress=".onListItemPress">
+					<items>
+		              <StandardListItem title="Lenovo Legion Y740-15T" type="Active" custom:to="detail4" />
+						<StandardListItem title="Lenovo IdeaPad L340-15" type="Active" custom:to="detail5" />
+						<StandardListItem title="Lenovo ThinkPad E14" type="Active" custom:to="detail6" />
+					</items>
+				</List>
+			</Page>
+            
+            
+            
+            
+            
+               <Page
+				id="Apple"
+				title="Apple"
+				backgroundDesign= "List"
+				icon="sap-icon://action"
+				class="sapUiStdPage"
+				showNavButton="true"
+				navButtonPress=".onPressMasterBack">
+				<List itemPress=".onListItemPress">
+					<items>
+						<StandardListItem title="Apple MacBook Air 2020 MWTJ2RU/A" type="Active" custom:to="detail7" />
+						<StandardListItem title="Apple MacBook Pro 16 MVVK2RU/A" type="Active" custom:to="detail8" />
+						<StandardListItem title="Apple MacBook Pro 2019 MV962RU/A" type="Active" custom:to="detail9" />
+					</items>
+				</List>
+			</Page>
+            
+            
+		</masterPages>
+	</SplitApp>
+</mvc:View>
