@@ -6,7 +6,8 @@ sap.ui.define([
 	"use strict";
 
 	return Controller.extend("sap.m.sample.SplitApp.C", {
-
+var ImageGroupController = Controller.extend("sap.m.sample.Image.controller.ImageGroup1", {
+        
 		onInit: function () {
 			this.getSplitAppObj().setHomeIcon({
 				'phone': 'phone-icon.png',
@@ -14,6 +15,7 @@ sap.ui.define([
 				'icon': 'desktop.ico'
 			});
 		},
+              }
 
 		onOrientationChange: function (oEvent) {
 			var bLandscapeOrientation = oEvent.getParameter("landscape"),
